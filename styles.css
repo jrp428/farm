@@ -1,0 +1,199 @@
+/*imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/**css reset**/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*root variables*/
+
+header, aside{
+    background-color:#06A816;
+    color: #ffffff;
+    padding: 20px
+}
+header h1{
+    text-shadow: 2px 2px black ;
+}
+
+footer{
+    color:#06A816;
+    padding:5px
+}
+
+/**fix the padding tomfoolery later**/
+
+aside{
+    padding: 20px;
+}
+
+main{
+    font-family: Habibi;
+}
+
+.description{
+  text-align:left;
+}
+
+h1, h2, h3{
+    font-family: "Irish Grover";
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 1.75em;
+}
+
+h3{
+    font-size: 1.25em;
+}
+
+h1 + p{
+    font-style: italic;
+}
+
+nav li{
+    background-color: #E75D02;
+    padding: 10px 100px 10px 100px; 
+    margin: 10px;
+    border-radius: 5px;
+    outline: 2px solid #ffffff;
+    text-align: center;
+}
+
+#top{
+    position:fixed;
+    padding: 10px;
+    bottom: 5px;
+    right:15px;
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+}
+
+figure{
+    position: relative;
+    text-align: center;
+}
+figcaption{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    left:42%;
+    top:45%;
+}
+
+/*global styles*/
+@media screen and (min-width: 428px){
+    nav ul{
+        display: grid;
+        justify-content: center;
+    }
+    main{
+        text-align: center;
+    }
+}
+
+/*media query (medium)*/
+@media screen and (min-width: 834px){
+    nav ul{
+        display: flex;
+    }
+    .images{        
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / 2;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    aside{
+        display:flex;
+        justify-content: space-evenly;
+    }
+}
+
+/*media query (large)*/
+@media screen and (min-width: 1280px){
+    .images{        
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: 1 / 3;
+    }
+    nav, header{
+        display: grid;
+    }
+    header h2, p{
+        grid-column: 1;
+    }
+    nav{
+        grid-column: 4;
+        grid-row: 1;
+    }
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/*media query (xl)*/
+@media screen and (min-width: 1440px){
+    .images{        
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column: 1 / 4;
+    }
+
+}
